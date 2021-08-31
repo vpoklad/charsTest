@@ -1,4 +1,8 @@
-import { example } from '@/js/example';
-import '@/sass/main.scss';
+async function fetchData() {
+    const response = await fetch("./data/ZonAnn.Ts+dSST.csv")
+    const data = await response.text();
+    return data
+}
+fetchData().then(console.log);
 
-example();
+console.log(window);
